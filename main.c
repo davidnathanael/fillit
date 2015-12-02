@@ -6,14 +6,14 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 11:31:15 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/02 13:13:53 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/02 16:03:22 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
-#include "fillit.h"
 #include <fcntl.h>
 #include <unistd.h>
+#include "libft/libft.h"
+#include "fillit.h"
 
 int	main(int ac, char **av)
 {
