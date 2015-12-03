@@ -6,14 +6,13 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 16:17:16 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/03 20:46:49 by adompe           ###   ########.fr       */
+/*   Updated: 2015/12/03 21:12:45 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
 #include "str2array.h"
-//#include "libft.h"
+#include "libft.h"
 
 char	**ft_str2array(char *str)
 {
