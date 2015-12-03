@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 13:50:19 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/02 18:31:50 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/03 13:19:15 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,11 @@
 # define BUF_SIZE 1024
 # define VALID 1
 # define NOT_VALID -1
+# define TETR_SIZE 21
 
-int		ft_check_file(int fd);
+char	*ft_check_file(int fd);
 char	*ft_file2str(int fd);
+int		ft_check_chars(char *str);
+int		ft_check_format(char *str);
 
 #endif
