@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2015/12/02 11:23:04 by ddela-cr          #+#    #+#              #
-#    Updated: 2015/12/02 12:14:31 by ddela-cr         ###   ########.fr        #
+#    Created: 2015/12/03 11:46:23 by ddela-cr          #+#    #+#              #
+#    Updated: 2015/12/03 11:59:30 by ddela-cr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,8 +29,14 @@ LIBFT_DIR	=	libft/
 LIBFT_LIB	=	libft/libft.a
 
 SRCBASE		=	\
+				check_file.c												\
+				fillit.c													\
+				main.c
 
 INCBASE		=	\
+				check_file.h												\
+				fillit.h													\
+				libft.h
 
 SRCS		=	$(addprefix $(SRCDIR), $(SRCBASE))
 
@@ -47,7 +53,8 @@ $(NAME):	$(OBJS)
 	$(CC) $(FLAGS) -o $(NAME) $(OBJS) $(LIBFT_LIB)
 	echo -en "\r\033[38;5;22m☑️  MAKE   $(NAMEBASE)\033[0m\033[K"
 	echo "\r\033[38;5;184m👥  GROUP MEMBER(S):\033[0m\033[K"
-	echo "\r\033[38;5;15m`cat auteur | sed s/^/\ \ \ \ -/g`\033[0m\033[K"
+	echo "\r\033[38;5;15mddela-cr\033[0m\033[K"
+	echo "\r\033[38;5;15madompe\033[0m\033[K"
 
 $(OBJS):	$(SRCS) $(INCS)
 	printf "\r\033[38;5;11m⌛  MAKE   $(NAMEBASE) plz wait ...\033[0m\033[K"

@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_file.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 12:49:51 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/02 18:58:11 by ddela-cr         ###   ########.fr       */
+/*   Created: 2015/11/25 18:48:25 by ddela-cr          #+#    #+#             */
+/*   Updated: 2015/11/30 16:04:42 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/types.h>
-#include <sys/uio.h>
-#include <unistd.h>
-#include "libft/libft.h"
-#include "check_file.h"
+#include <string.h>
 
-int	ft_check_file(int fd)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	char	*str;
-
-	str = ft_file2str(fd);
-	if (!str)
-		return (NOT_VALID);
-	return (VALID);
-}
-
-char	*ft_file2str(int fd)
-{
-	int		ret;
-	char	buf[BUF_SIZE + 1];
-
-	ret = read(fd, buf, BUF_SIZE);
-	buf[ret] = '\0';
-	if (ret <= 0)
-		return (NULL);
-	return (ft_strdup(buf));
+	if (s1 != NULL && s2 != NULL)
+	{
+		while (*s1 && *s2 && (unsigned char)*s1 == (unsigned char)*s2)
+		{
+			s1++;
+			s2++;
+		}
+		return ((unsigned char)*s1 - (unsigned char)*s2);
+	}
+	return (0);
 }

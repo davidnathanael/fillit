@@ -1,41 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 11:31:15 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/02 18:58:16 by ddela-cr         ###   ########.fr       */
+/*   Created: 2015/11/27 14:02:12 by ddela-cr          #+#    #+#             */
+/*   Updated: 2015/11/30 16:04:57 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include <unistd.h>
-#include "libft/libft.h"
-#include "fillit.h"
+#include "libft.h"
 
-int	main(int ac, char **av)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	int	fd;
+	t_list	*new;
+	t_list	*crt;
 
-	if (ac == 2)
+	crt = (*f)(lst);
+	if (crt == NULL)
+		return (NULL);
+	new = crt;
+	lst = lst->next;
+	while (lst)
 	{
-		fd = open(av[1], O_RDONLY);
-		if (fd == -1)
-		{
-			ft_putstr("open() failed.\n");
-			return (1);
-		}
-		else
-			ft_fillit(fd);
-		if (close(fd) == -1)
-		{
-			ft_putstr("close() failed.\n");
-			return (1);
-		}
+		crt->next = (*f)(lst);
+		if (crt->next == NULL)
+			return (NULL);
+		crt = crt->next;
+		lst = lst->next;
 	}
-	else
-		ft_putstr("Argument must be a single file\n");
-	return (0);
+	return (new);
 }
