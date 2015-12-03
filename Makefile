@@ -31,12 +31,14 @@ LIBFT_LIB	=	libft/libft.a
 SRCBASE		=	\
 				check_file.c												\
 				fillit.c													\
-				main.c
+				main.c														\
+				str2array.c
 
 INCBASE		=	\
 				check_file.h												\
 				fillit.h													\
-				libft.h
+				libft.h														\
+				str2array.h
 
 SRCS		=	$(addprefix $(SRCDIR), $(SRCBASE))
 

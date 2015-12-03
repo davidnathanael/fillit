@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fillit.c                                           :+:      :+:    :+:   */
+/*   str2array.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 13:48:28 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/03 16:57:41 by ddela-cr         ###   ########.fr       */
+/*   Created: 2015/12/03 16:26:09 by ddela-cr          #+#    #+#             */
+/*   Updated: 2015/12/03 16:30:58 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "check_file.h"
-#include "str2array.h"
-#include "libft.h"
+#ifndef STR2ARRAY_H
+# define STR2ARRAY_H
 
-void	ft_fillit(int fd)
-{
-	char	*str;
+char	**ft_str2array(char *str);
+int		ft_count_tetriminos(char *str);
+char	**ft_set_tetriminos(char *str, char **tetriminos);
 
-	str = ft_check_file(fd);
-	if (str == NULL)
-		ft_putstr("error");
-	else
-		ft_putstr("ft_fillit : valid\n");
-	ft_str2array(str);
-}
+#endif

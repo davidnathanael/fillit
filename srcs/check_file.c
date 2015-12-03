@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 12:49:51 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/03 14:00:27 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/03 16:57:24 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int		ft_check_format(char *str)
 	count = 1;
 	while (str[i] && count <= TETR_SIZE)
 	{
-		if (str[i] == '\n')
+		if (str[i] == '\n' && i > 0)
 		{
 			if (str[i - 1] == '\n')
 			{
