@@ -30,12 +30,14 @@ LIBFT_LIB	=	libft/libft.a
 
 SRCBASE		=	\
 				check_file.c												\
+				check_tetri.c												\
 				fillit.c													\
 				main.c														\
 				str2array.c
 
 INCBASE		=	\
 				check_file.h												\
+				check_tetri.h												\
 				fillit.h													\
 				libft.h														\
 				str2array.h
