@@ -6,10 +6,10 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 17:24:25 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/04 18:29:21 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/04 19:49:10 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
 int	ft_check_tetri(t_list *list)
 {
 	t_list	*tmp;
@@ -72,3 +72,4 @@ int	ft_check_around(int x, int y, char **tetri, int count)
 	}
 	return (VALID);
 }
+*/

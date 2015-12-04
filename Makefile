@@ -33,14 +33,14 @@ SRCBASE		=	\
 				check_tetri.c												\
 				fillit.c													\
 				main.c														\
-				str2array.c
+				tab2list.c
 
 INCBASE		=	\
 				check_file.h												\
 				check_tetri.h												\
 				fillit.h													\
 				libft.h														\
-				str2array.h
+				tab2list.h
 
 SRCS		=	$(addprefix $(SRCDIR), $(SRCBASE))
 

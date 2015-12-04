@@ -18,7 +18,7 @@
 # define NOT_VALID -1
 # define TETR_SIZE 21
 
-char	*ft_check_file(int fd);
+char	**ft_check_file(int fd);
 char	*ft_file2str(int fd);
 int		ft_is_valid_char(char c);
 int		ft_check_format(char *str);

@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 12:49:51 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/04 17:24:17 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/04 18:52:04 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@
 ** Returns NULL if format is not valid.
 */
 
-char	*ft_check_file(int fd)
+char	**ft_check_file(int fd)
 {
 	char	*str;
 
 	str = ft_file2str(fd);
 	if (!str || ft_check_format(str) == NOT_VALID)
 		return (NULL);
-	return (str);
+	return (ft_strsplit(str, '\n'));
 }
 
 char	*ft_file2str(int fd)
