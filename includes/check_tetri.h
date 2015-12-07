@@ -15,6 +15,5 @@
 
 # include "tab2list.h"
 
-int		ft_check_tetri(t_tetr *list);
 
 #endif

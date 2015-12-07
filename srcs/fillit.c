@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 13:48:28 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/07 13:21:26 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/07 17:28:29 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,10 @@
 void	ft_fillit(int fd)
 {
 	char	**tetr;
-	t_list	*list = NULL;
+	//t_list	*list = NULL;
 
 	tetr = ft_check_file(fd);
 	if (tetr == NULL)
 		ft_putstr("error");
-	list = ft_tab2list(tetr);
-	printf("%d\n", ft_check_tetri(list->head));
+	//list = ft_tab2list(tetr);
 }
