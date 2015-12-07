@@ -29,6 +29,7 @@ LIBFT_DIR	=	libft/
 LIBFT_LIB	=	libft/libft.a
 
 SRCBASE		=	\
+				array_test.c												\
 				check_file.c												\
 				fillit.c													\
 				main.c														\

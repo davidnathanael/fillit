@@ -16,5 +16,6 @@
 char	**ft_str2array(char *str);
 int		ft_count_tetriminos(char *str);
 char	**ft_set_tetriminos(char *str, char **tetriminos);
+char	**ft_alloc_tetriminos(int count);
 
 #endif
