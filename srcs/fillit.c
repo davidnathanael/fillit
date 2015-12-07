@@ -6,22 +6,24 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 13:48:28 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/03 16:57:41 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/07 13:01:07 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check_file.h"
-#include "str2array.h"
+#include "check_tetri.h"
+#include "tab2list.h"
 #include "libft.h"
+#include <stdio.h>
 
 void	ft_fillit(int fd)
 {
-	char	*str;
+	char	**tetr;
+	t_list	*list = NULL;
 
-	str = ft_check_file(fd);
-	if (str == NULL)
+	tetr = ft_check_file(fd);
+	if (tetr == NULL)
 		ft_putstr("error");
-	else
-		ft_putstr("ft_fillit : valid\n");
-	ft_str2array(str);
+	list = ft_tab2list(tetr);
+	printf("%d\n", ft_check_tetri(list->head));
 }

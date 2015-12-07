@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 12:49:51 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/03 16:57:24 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/04 18:52:04 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,14 @@
 ** Returns NULL if format is not valid.
 */
 
-char	*ft_check_file(int fd)
+char	**ft_check_file(int fd)
 {
 	char	*str;
 
 	str = ft_file2str(fd);
-	if (!str || ft_check_chars(str) == NOT_VALID
-			|| ft_check_format(str) == NOT_VALID)
+	if (!str || ft_check_format(str) == NOT_VALID)
 		return (NULL);
-	ft_putchar('\n');
-	return (str);
+	return (ft_strsplit(str, '\n'));
 }
 
 char	*ft_file2str(int fd)
@@ -48,18 +46,14 @@ char	*ft_file2str(int fd)
 }
 
 /*
-** Checks if str contains . or # or \n char only
+** Checks if char is . or # or \n
 ** Returns VALID if true, else returns NOT_VALID
 */
 
-int		ft_check_chars(char *str)
+int		ft_is_valid_char(char c)
 {
-	while (*str)
-	{
-		if (*str != '.' && *str != '#' && *str != '\n')
-			return (NOT_VALID);
-		str++;
-	}
+	if (c != '.' && c != '#' && c != '\n')
+		return (NOT_VALID);
 	return (VALID);
 }
 
@@ -70,23 +64,20 @@ int		ft_check_format(char *str)
 
 	i = 0;
 	count = 1;
-	while (str[i] && count <= TETR_SIZE)
+	while (str[i])
 	{
-		if (str[i] == '\n' && i > 0)
+		if (ft_is_valid_char(str[i]) == NOT_VALID)
+			return (NOT_VALID);
+		if (count % 5 == 0 && str[i] != '\n')
+			return (NOT_VALID);
+		if (count == TETR_SIZE)
 		{
-			if (str[i - 1] == '\n')
-			{
-				count = 1;
-				i++;
-				continue ;
-			}
-			if (count % 5 != 0)
+			if (str[i] != '\n')
 				return (NOT_VALID);
+			count = 0;
 		}
 		count++;
 		i++;
 	}
-	if (count != TETR_SIZE)
-		return (NOT_VALID);
 	return (VALID);
 }

@@ -6,7 +6,7 @@
 #    By: ddela-cr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/27 16:43:54 by ddela-cr          #+#    #+#              #
-#    Updated: 2015/12/03 11:58:33 by ddela-cr         ###   ########.fr        #
+#    Updated: 2015/12/04 19:45:00 by ddela-cr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,12 +68,6 @@ ft_putchar_fd.c\
 ft_putstr_fd.c\
 ft_putendl_fd.c\
 ft_putnbr_fd.c\
-ft_lstnew.c\
-ft_lstdelone.c\
-ft_lstdel.c\
-ft_lstadd.c\
-ft_lstiter.c\
-ft_lstmap.c\
 ft_swap.c\
 ft_strupcase.c\
 ft_strlowcase.c\
