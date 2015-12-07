@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>			+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 19:47:17 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/07 13:05:29 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/07 13:23:07 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ t_list		*ft_tab2list(char **tab)
 	{
 		if (((i + 1) % 4) == 0)
 		{
-			list = ft_list_append(list, ft_tab2tetr(i, tab), i / 4 + 'A');
+			list = ft_list_append(list, ft_tab2tetr(i, tab), i / 4);
 		}
 		i++;
 	}
@@ -57,17 +57,16 @@ char	**ft_tab2tetr(int line, char **tab)
 	return (tetr);
 }
 
-t_list *ft_list_append(t_list *list, char **tetr, char letter)
+t_list *ft_list_append(t_list *list, char **tetr, char index)
 {
 	t_tetr	*new_tetr;
 
 	new_tetr = (t_tetr *)malloc(sizeof(t_tetr));
-	if (!new_tetr)
-		return (NULL);
 	if (new_tetr != NULL)
 	{
 			new_tetr->content = tetr;
-			new_tetr->letter = letter;
+			new_tetr->index = index;
+			new_tetr->letter = index + 'A';
 		new_tetr->next = NULL;
 		if (list->tail == NULL)
 		{

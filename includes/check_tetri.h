@@ -16,7 +16,5 @@
 # include "tab2list.h"
 
 int		ft_check_tetri(t_tetr *list);
-int		ft_browse_tetri(int *x, int *y, char **tetri, int *count);
-int		ft_check_around(int x, int y, char **tetri, int count);
 
 #endif
