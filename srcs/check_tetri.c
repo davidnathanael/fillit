@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 17:24:25 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/07 13:05:06 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/07 14:43:52 by adompe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,62 +17,17 @@
 int	ft_check_tetri(t_tetr *list)
 {
 	t_tetr	*tmp;
-	int		x;
+	int		i;
 	int		y;
 	int		count;
 
 	tmp = list;
-	x = 1;
-	y = 1;
+	x = 0;
+	i = 0;
 	count = 0;
-	while (tmp)
+	while (i < 4)
 	{
-		while (x != 4 && y != 4)
-		{
-			if (ft_browse_tetri(&x, &y, tmp->content, &count) == NOT_VALID)
-				return (NOT_VALID);
-		}
-		if (count != 4)
-			return (NOT_VALID);
-		x = 1;
-		y = 1;
-		tmp = tmp->next;
-	}
-	return (VALID);
-}
-
-int	ft_browse_tetri(int *x, int *y, char **tetri, int *count)
-{
-	if (tetri[*y][*x] == '#'
-			&& ft_check_around(*x, *y, tetri, *count) == NOT_VALID)
-		return (NOT_VALID);
-	if (tetri[*y][*x] == '#')
-		(*count)++;
-	(*x)++;
-	if (*x == 5)
-	{
-		*x = 0;
-		(*y)++;
-	}
-	return (VALID);
-}
-
-int	ft_check_around(int x, int y, char **tetri, int count)
-{
-	if (x < 4 && y < 4 && count < 4)
-	{
-		if (tetri[y][x + 1] != '#' && tetri[y + 1][x] != '#')
-			return (NOT_VALID);
-	}
-	if (y == 4 && x != 4 && count < 4)
-	{
-		if (tetri[y][x + 1] != '#')
-			return (NOT_VALID);
-	}
-	if (x == 4 && y != 4 && count < 4)
-	{
-		if (tetri[y + 1][x] != '#')
-			return (NOT_VALID);
+		if (tmp->tetri[];
 	}
 	return (VALID);
 }

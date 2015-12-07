@@ -14,11 +14,8 @@
 # define CHECK_TETRI_H
 
 <<<<<<< HEAD:includes/str2array.h
-char	**ft_str2array(char *str);
-int		ft_count_tetriminos(char *str);
-char	**ft_set_tetriminos(char *str, char **tetriminos);
-char	**ft_alloc_tetriminos(int count);
-=======
+=======int	ft_check_tetri(t_tetr *list);
+
 # include "tab2list.h"
 
 int		ft_check_tetri(t_tetr *list);
