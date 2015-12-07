@@ -6,7 +6,7 @@
 #    By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 11:46:23 by ddela-cr          #+#    #+#              #
-#    Updated: 2015/12/03 11:59:30 by ddela-cr         ###   ########.fr        #
+#    Updated: 2015/12/07 17:38:34 by adompe           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,18 +29,22 @@ LIBFT_DIR	=	libft/
 LIBFT_LIB	=	libft/libft.a
 
 SRCBASE		=	\
-				array_test.c												\
 				check_file.c												\
 				check_tetri.c												\
+				fill_tetri.c												\
 				fillit.c													\
 				main.c														\
+				opti_content.c												\
 				tab2list.c
 
 INCBASE		=	\
 				check_file.h												\
 				check_tetri.h												\
+				fill_tetri.h												\
 				fillit.h													\
 				libft.h														\
+				opti_content.h												\
+				optt_content.h												\
 				tab2list.h
 
 SRCS		=	$(addprefix $(SRCDIR), $(SRCBASE))

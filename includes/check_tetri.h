@@ -6,21 +6,16 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 18:25:38 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/07 12:59:57 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/07 17:47:35 by adompe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHECK_TETRI_H
 # define CHECK_TETRI_H
-
-<<<<<<< HEAD:includes/str2array.h
-=======int	ft_check_tetri(t_tetr *list);
-
 # include "tab2list.h"
 
 int		ft_check_tetri(t_tetr *list);
-int		ft_browse_tetri(int *x, int *y, char **tetri, int *count);
-int		ft_check_around(int x, int y, char **tetri, int count);
->>>>>>> 19ee9d4ce380177dcc74f0ca5779440dafd0aa28:includes/check_tetri.h
+int		ft_check_content(char **content);
+int		ft_check_cases(int x, int y, char **tmp);
 
 #endif
