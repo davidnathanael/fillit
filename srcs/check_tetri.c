@@ -6,13 +6,17 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 17:24:25 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/04 19:49:10 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/07 13:05:06 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
-int	ft_check_tetri(t_list *list)
+
+#include "check_tetri.h"
+#include "check_file.h"
+#include "tab2list.h"
+
+int	ft_check_tetri(t_tetr *list)
 {
-	t_list	*tmp;
+	t_tetr	*tmp;
 	int		x;
 	int		y;
 	int		count;
@@ -25,7 +29,7 @@ int	ft_check_tetri(t_list *list)
 	{
 		while (x != 4 && y != 4)
 		{
-			if (ft_browse_tetri(&x, &y, tmp->tetri, &count) == NOT_VALID)
+			if (ft_browse_tetri(&x, &y, tmp->content, &count) == NOT_VALID)
 				return (NOT_VALID);
 		}
 		if (count != 4)
@@ -34,6 +38,7 @@ int	ft_check_tetri(t_list *list)
 		y = 1;
 		tmp = tmp->next;
 	}
+	return (VALID);
 }
 
 int	ft_browse_tetri(int *x, int *y, char **tetri, int *count)
@@ -43,13 +48,12 @@ int	ft_browse_tetri(int *x, int *y, char **tetri, int *count)
 		return (NOT_VALID);
 	if (tetri[*y][*x] == '#')
 		(*count)++;
-	if (*x == 4)
+	(*x)++;
+	if (*x == 5)
 	{
 		*x = 0;
 		(*y)++;
-		continue ;
 	}
-	(*x)++;
 	return (VALID);
 }
 
@@ -72,4 +76,3 @@ int	ft_check_around(int x, int y, char **tetri, int count)
 	}
 	return (VALID);
 }
-*/

@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 19:46:27 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/05 00:37:34 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/07 13:05:39 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@ typedef struct		s_tetr
 {
 	char			**content;
 	char			letter;
-	struct s_tetr	*p_next;
-	struct s_tetr	*p_prev;
+	struct s_tetr	*next;
+	struct s_tetr	*prev;
 }					t_tetr;
 
 typedef struct		s_list
 {
 	unsigned int	length;
-	t_tetr			*p_tail;
-	t_tetr			*p_head;
+	t_tetr			*tail;
+	t_tetr			*head;
 }					t_list;
 
 t_list	*ft_tab2list(char **tab);
