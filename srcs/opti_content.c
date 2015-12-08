@@ -21,7 +21,7 @@ t_tetr	*ft_opti_content(t_tetr *list)
 	t_tetr	*tmp;
 
 	tmp = list;
-	while (tmp->next)
+	while (tmp)
 	{
 		tmp->content = ft_condense(tmp->content);
 		tmp = tmp->next;

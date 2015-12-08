@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fillit.c                                           :+:      :+:    :+:   */
+/*   grid.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 13:48:28 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/08 13:13:26 by ddela-cr         ###   ########.fr       */
+/*   Created: 2015/12/08 12:26:58 by ddela-cr          #+#    #+#             */
+/*   Updated: 2015/12/08 12:50:29 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "check_file.h"
-#include "check_tetri.h"
-#include "fill_tetri.h"
-#include "opti_content.h"
-#include "tab2list.h"
-#include "grid.h"
-#include "libft.h"
-#include <stdio.h>
+#ifndef GRID_H
+# define GRID_H
 
-void	ft_fillit(int fd)
-{
-	char	**tetr;
-	t_list	*list = NULL;
+char	**ft_smallest_grid(int length);
+char	**ft_alloc_grid(int width);
+int		ft_nearest_sqrt(int nb);
 
-	tetr = ft_check_file(fd);
-	if (tetr == NULL)
-		ft_putstr("error");
-	list = ft_tab2list(tetr);
-	//ft_opti_content(list->head);
-	//ft_fill_tetri(list->head);
-}
+#endif

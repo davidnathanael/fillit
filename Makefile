@@ -33,6 +33,7 @@ SRCBASE		=	\
 				check_tetri.c												\
 				fill_tetri.c												\
 				fillit.c													\
+				grid.c														\
 				main.c														\
 				opti_content.c												\
 				tab2list.c
@@ -42,6 +43,7 @@ INCBASE		=	\
 				check_tetri.h												\
 				fill_tetri.h												\
 				fillit.h													\
+				grid.h														\
 				libft.h														\
 				opti_content.h												\
 				optt_content.h												\
