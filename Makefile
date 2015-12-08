@@ -44,6 +44,7 @@ INCBASE		=	\
 				fill_tetri.h												\
 				fillit.h													\
 				grid.h														\
+				is_placeable.h												\
 				libft.h														\
 				tab2list.h
 
