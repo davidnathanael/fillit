@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 12:09:57 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/08 13:00:04 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/08 16:12:05 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,15 @@ char **ft_smallest_grid(int length)
 	nb_blocs = 4 * length;
 	width = 0;
 	width = ft_nearest_sqrt(nb_blocs);
+	grid = ft_alloc_grid(width);
+	return (grid);
+}
+
+char **ft_bigger_grid(int width, char **grid)
+{
+	free(grid);
+	width++;
+
 	grid = ft_alloc_grid(width);
 	return (grid);
 }

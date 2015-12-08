@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 13:48:28 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/08 13:13:26 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/08 17:34:10 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,10 @@ void	ft_fillit(int fd)
 	if (tetr == NULL)
 		ft_putstr("error");
 	list = ft_tab2list(tetr);
+	printf("x : %d | y : %d\n", list->head->pos[0].x, list->head->pos[0].y);
+	printf("x : %d | y : %d\n", list->head->pos[1].x, list->head->pos[1].y);
+	printf("x : %d | y : %d\n", list->head->pos[2].x, list->head->pos[2].y);
+	printf("x : %d | y : %d\n", list->head->pos[3].x, list->head->pos[3].y);
 	//ft_opti_content(list->head);
 	//ft_fill_tetri(list->head);
 }

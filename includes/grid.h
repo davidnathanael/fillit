@@ -14,6 +14,7 @@
 # define GRID_H
 
 char	**ft_smallest_grid(int length);
+char	**ft_bigger_grid(int width, char **grid);
 char	**ft_alloc_grid(int width);
 int		ft_nearest_sqrt(int nb);
 
