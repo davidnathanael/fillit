@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>			+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 19:47:17 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/08 18:13:12 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/09 00:12:31 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,8 @@ void	ft_set_positions(t_tetr *tetr)
 	count = 0;
 	grid = tetr->content;
 	tetr->pos = (t_pos *)malloc(sizeof(t_pos) * 4);
+	tetr->pos_in_grid.x = -1;
+	tetr->pos_in_grid.y = -1;
 	while (grid[y][x] != '#')
 	{
 		x++;
@@ -107,7 +109,6 @@ void	ft_set_positions(t_tetr *tetr)
 			y++;
 		}
 	}
-//	printf("x : %d | y : %d\n", x, y);
 	ft_set_positions_bis(tetr, x, y);
 }
 
@@ -122,16 +123,12 @@ void	ft_set_positions_bis(t_tetr *tetr, int x, int y)
 	count = 1;
 	tetr->pos[0].x = 0;
 	tetr->pos[0].y = 0;
-//	printf("index : %d | x : %d\n", tetr->index, tetr->pos[count].x);
-//	printf("index : %d | y : %d\n\n", tetr->index, tetr->pos[count].y);
 	while (i < 4 && j < 4 && count != 4)
 	{
 		if (tetr->content[i][j] == '#')
 		{
 			tetr->pos[count].x = j - x;
 			tetr->pos[count].y = i - y;
-//			printf("index : %d | x : %d\n", tetr->index, tetr->pos[count].x);
-//			printf("index : %d | y : %d\n\n", tetr->index, tetr->pos[count].y);
 			count++;
 		}
 		j++;

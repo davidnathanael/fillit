@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 19:46:27 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/08 18:21:50 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/09 00:12:41 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct		s_tetr
 	char			letter;
 	int				index;
 	t_pos			*pos;
+	t_pos			pos_in_grid;
 	struct s_tetr	*next;
 	struct s_tetr	*prev;
 }					t_tetr;
