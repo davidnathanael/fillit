@@ -6,22 +6,15 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 12:49:51 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/04 18:52:04 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/07 17:50:53 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
 #include <sys/uio.h>
 #include <unistd.h>
-#include <stdio.h>
 #include "libft.h"
 #include "check_file.h"
-
-/*
-** Checks if file format correct.
-** Returns file converted in str if format is valid.
-** Returns NULL if format is not valid.
-*/
 
 char	**ft_check_file(int fd)
 {
@@ -45,11 +38,6 @@ char	*ft_file2str(int fd)
 	return (ft_strdup(buf));
 }
 
-/*
-** Checks if char is . or # or \n
-** Returns VALID if true, else returns NOT_VALID
-*/
-
 int		ft_is_valid_char(char c)
 {
 	if (c != '.' && c != '#' && c != '\n')
@@ -70,7 +58,7 @@ int		ft_check_format(char *str)
 			return (NOT_VALID);
 		if (count % 5 == 0 && str[i] != '\n')
 			return (NOT_VALID);
-		if (count == TETR_SIZE)
+		if (count == TETR_SIZE && str[count])
 		{
 			if (str[i] != '\n')
 				return (NOT_VALID);
@@ -79,5 +67,7 @@ int		ft_check_format(char *str)
 		count++;
 		i++;
 	}
+	if (count != 21)
+		return (NOT_VALID);
 	return (VALID);
 }

@@ -6,10 +6,11 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 17:24:25 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/07 20:18:08 by adompe           ###   ########.fr       */
+/*   Updated: 2015/12/08 10:47:50 by adompe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "check_tetri.h"
 #include "check_file.h"
 #include "tab2list.h"
