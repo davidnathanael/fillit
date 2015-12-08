@@ -13,7 +13,7 @@
 #ifndef IS_PLACEABLE_H
 # define IS_PLACEABLE_H
 
-int		ft_is_placeable(char **grid, t_pos *pos, int x, int y);
+int		ft_is_placeable(char **grid, t_tetr *tetri, int x, int y);
 void	ft_place_tetri(char **grid, t_pos *pos, int x, int y);
 
 #endif
