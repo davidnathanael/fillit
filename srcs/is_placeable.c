@@ -6,7 +6,7 @@
 /*   By: adompe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 18:50:50 by adompe            #+#    #+#             */
-/*   Updated: 2015/12/08 21:29:55 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/08 21:55:05 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ void	ft_place_tetri(char **grid, t_tetr *tetr, int x, int y)
 	while (i < 4)
 	{
 		grid[y + tetr->pos[i].y][x + tetr->pos[i].x] = tetr->letter;
+		i++;
 	}
 }
