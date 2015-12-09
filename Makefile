@@ -31,7 +31,6 @@ LIBFT_LIB	=	libft/libft.a
 SRCBASE		=	\
 				check_file.c												\
 				check_tetri.c												\
-				fill_tetri.c												\
 				fillit.c													\
 				grid.c														\
 				is_placeable.c												\
@@ -41,7 +40,6 @@ SRCBASE		=	\
 INCBASE		=	\
 				check_file.h												\
 				check_tetri.h												\
-				fill_tetri.h												\
 				fillit.h													\
 				grid.h														\
 				is_placeable.h												\

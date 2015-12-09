@@ -17,5 +17,6 @@
 
 int		ft_is_placeable(char **grid, t_tetr *tetri, int x, int y);
 void	ft_place_tetri(char **grid, t_tetr *tetr, int x, int y);
+void	ft_remove_tetri(char **grid, t_tetr *tetr);
 
 #endif
