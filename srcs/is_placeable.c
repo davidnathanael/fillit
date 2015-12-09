@@ -6,7 +6,7 @@
 /*   By: adompe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 18:50:50 by adompe            #+#    #+#             */
-/*   Updated: 2015/12/09 18:01:03 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/09 18:02:28 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,6 @@ void	ft_remove_tetri(char **grid, t_tetr *tetr)
 	i = 0;
 	while (i < 4)
 	{
-		//printf("\nERASED | x : %d | y : %d\n", pos_in_grid.x + pos[i].x, pos_in_grid.y + pos[i].y);
 		grid[pos_in_grid.y + pos[i].y][pos_in_grid.x + pos[i].x] = '.';
 		i++;
 	}
