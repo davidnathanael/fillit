@@ -6,14 +6,13 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 13:48:28 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/09 00:11:43 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/09 13:35:37 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 #include "check_file.h"
 #include "check_tetri.h"
-#include "fill_tetri.h"
 #include "tab2list.h"
 #include "grid.h"
 #include "is_placeable.h"
@@ -65,6 +64,7 @@ void	ft_fill_grid(char **grid, t_tetr *tetri, int width)
 		ft_print_grid(grid);
 		ft_putstr("\n\n\n\n");
 	}
+	ft_print_grid(grid);
 }
 
 void	ft_print_grid(char **grid)
