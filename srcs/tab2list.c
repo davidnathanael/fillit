@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>			+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 19:47:17 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/09 00:12:31 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/09 15:38:29 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,8 +98,9 @@ void	ft_set_positions(t_tetr *tetr)
 	count = 0;
 	grid = tetr->content;
 	tetr->pos = (t_pos *)malloc(sizeof(t_pos) * 4);
-	tetr->pos_in_grid.x = -1;
-	tetr->pos_in_grid.y = -1;
+	tetr->pos_in_grid.x = 0;
+	tetr->pos_in_grid.y = 0;
+	tetr->placed = 0;
 	while (grid[y][x] != '#')
 	{
 		x++;
