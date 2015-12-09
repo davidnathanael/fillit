@@ -6,7 +6,7 @@
 /*   By: adompe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 18:50:50 by adompe            #+#    #+#             */
-/*   Updated: 2015/12/09 17:52:46 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/09 18:01:03 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 #include "tab2list.h"
 #include "libft.h"
 #include <stdio.h>
+
+/*
+** Tente de placer le tetri dans grid.
+** Commence les essais a partir de x et y (parametres)
+** Si succes, place dans le grid puis retourne 1.
+** Sinon retourne 0
+*/
 
 int ft_is_placed(char **grid, t_tetr *tetri, int x, int y)
 {
