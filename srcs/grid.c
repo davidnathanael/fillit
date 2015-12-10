@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 12:09:57 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/10 14:29:38 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/10 18:30:38 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,21 @@ char	**ft_alloc_grid(int width)
 		i++;
 	}
 	return (grid);
+}
+
+void	ft_print_grid(char **grid)
+{
+	int	i;
+	int	width;
+
+	i = 0;
+	width = ft_strlen(grid[0]);
+	while (i < width)
+	{
+		ft_putstr(grid[i]);
+		ft_putchar('\n');
+		i++;
+	}
 }
 
 int		ft_nearest_sqrt(int nb)
