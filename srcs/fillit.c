@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 13:48:28 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/09 17:53:17 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/10 15:03:20 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,22 @@ void	ft_fill_grid(char **grid, t_list *list)
 {
 	t_tetr	*tmp;
 	int		placed;
+	int		complete;
 
 	tmp = list->head;
 	placed = 0;
-	while (tmp)
+	complete = 0;
+	while (!complete)
 	{
-		placed = ft_is_placed(grid, tmp, tmp->pos_in_grid.x, tmp->pos_in_grid.y);
-		tmp = tmp->next;
-		ft_print_grid(grid);
-		ft_putstr("\n--------------------------\n\n");
+		while (tmp)
+		{
+			placed = ft_is_placed(grid, tmp, tmp->pos_in_grid.x, tmp->pos_in_grid.y);
+			tmp = tmp->next;
+			ft_print_grid(grid);
+			ft_putstr("\n--------------------------\n\n");
+		}
+		complete = 1;
+		ft_bigger_grid(grid);
 	}
 }
 
