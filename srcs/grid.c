@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 12:09:57 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/10 18:30:38 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/10 21:57:08 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,9 @@ char **ft_bigger_grid(char **grid)
 {
 	int	width;
 
-	width = ft_strlen(grid[0]) + 1;
+	width = (int)ft_strlen(grid[0]) + 1;
 	free(grid);
+	grid = NULL;
 	grid = ft_alloc_grid(width);
 	return (grid);
 }

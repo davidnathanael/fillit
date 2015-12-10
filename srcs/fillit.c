@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 13:48:28 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/10 18:31:26 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/10 22:27:10 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,11 @@ void	ft_fillit(int fd)
 		ft_putstr("error");
 	list = ft_tab2list(tetr);
 	grid = ft_smallest_grid(list->length);
-	ft_fill_grid(grid, list);
+	grid = ft_fill_grid(grid, list);
+	ft_print_grid(grid);
 }
 
-void	ft_fill_grid(char **grid, t_list *list)
+char	**ft_fill_grid(char **grid, t_list *list)
 {
 	t_tetr	*tmp;
 	int		placed;
@@ -47,11 +48,49 @@ void	ft_fill_grid(char **grid, t_list *list)
 		while (tmp)
 		{
 			placed = ft_is_placed(grid, tmp, tmp->pos_in_grid.x, tmp->pos_in_grid.y);
-			tmp = tmp->next;
-			ft_print_grid(grid);
-			ft_putstr("\n--------------------------\n\n");
+			//printf("%d | placed : %d\n", tmp->index, placed);
+			if (!placed)
+			{
+				if (tmp->index == 0)
+				{
+					ft_reinit_pos(tmp);
+					break ;
+				}
+				tmp->pos_in_grid.x = 0;
+				tmp->pos_in_grid.y = 0;
+				tmp = tmp->prev;
+				ft_remove_tetri(grid, tmp);
+				tmp->pos_in_grid.x++;
+				if (tmp->pos_in_grid.x == (int)ft_strlen(grid[0]) - 1)
+				{
+					tmp->pos_in_grid.x = 0;
+					tmp->pos_in_grid.y++;
+				}
+			}
+			else
+				tmp = tmp->next;
+			//ft_print_grid(grid);
+			//ft_putstr("\n-----------");
+			//ft_putnbr((int)ft_strlen(grid[0]));
+			//ft_putstr("---------------\n\n");
 		}
-		complete = 1;
-		ft_bigger_grid(grid);
+		if (!tmp)
+			break ;
+		tmp = list->head;
+		grid = ft_bigger_grid(grid);
+	}
+	return (grid);
+}
+
+void	ft_reinit_pos(t_tetr *tetr)
+{
+	t_tetr	*tmp;
+
+	tmp = tetr;
+	while (tmp)
+	{
+		tmp->pos_in_grid.x = 0;
+		tmp->pos_in_grid.y = 0;
+		tmp = tmp->next;
 	}
 }

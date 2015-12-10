@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>			+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 19:47:17 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/09 15:38:29 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/10 22:07:04 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,8 +120,8 @@ void	ft_set_positions_bis(t_tetr *tetr, int x, int y)
 	int	count;
 
 	i = y;
-	j = x + 1;
-	count = 1;
+	j = x;
+	count = 0;
 	tetr->pos[0].x = 0;
 	tetr->pos[0].y = 0;
 	while (i < 4 && j < 4 && count != 4)
