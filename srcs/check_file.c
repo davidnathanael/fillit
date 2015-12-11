@@ -6,13 +6,14 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 12:49:51 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/08 11:35:28 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/11 02:31:50 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
 #include <sys/uio.h>
 #include <unistd.h>
+#include <stdio.h>
 #include "libft.h"
 #include "check_file.h"
 

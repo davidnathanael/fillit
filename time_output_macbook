@@ -1,0 +1,71 @@
+error
+./fillit samples/1sample  0,00s user 0,00s system 69% cpu 0,003 total
+.AA.
+AABB
+...B
+...B
+./fillit samples/2sample  0,00s user 0,00s system 71% cpu 0,003 total
+.AA.
+AABB
+.CCB
+CC.B
+./fillit samples/3sample  0,00s user 0,00s system 70% cpu 0,003 total
+.AABB
+AACCB
+.CC.B
+.DD..
+DD...
+./fillit samples/4sample  0,00s user 0,00s system 71% cpu 0,003 total
+.AABB
+AACCB
+.CC.B
+.DDEE
+DDEE.
+./fillit samples/5sample  0,00s user 0,00s system 69% cpu 0,004 total
+.AABB.
+AACCB.
+.CC.B.
+.DDEE.
+DDEEFF
+...FF.
+./fillit samples/6sample  0,00s user 0,00s system 74% cpu 0,004 total
+.AACC.
+AACCBB
+.DDEEB
+DDEE.B
+.FFGG.
+FFGG..
+./fillit samples/7sample  0,00s user 0,00s system 78% cpu 0,005 total
+.AABB..
+AACCB..
+.CC.BDD
+.EE.DD.
+EEFFGG.
+.FFGGHH
+....HH.
+./fillit samples/8sample  0,06s user 0,00s system 91% cpu 0,067 total
+.AABB..
+AACCB..
+.CC.B..
+.DDEEFF
+DDEEFF.
+IIIGGHH
+.IGGHH.
+./fillit samples/9sample  0,06s user 0,00s system 92% cpu 0,068 total
+.AACCBB
+AACCDDB
+.EEDD.B
+EEFFGG.
+.FFGG..
+IIIHHJJ
+.IHHJJ.
+./fillit samples/10sample  0,24s user 0,00s system 97% cpu 0,243 total
+.AABB.CC
+AADDBCC.
+.DD.BEE.
+.FF.EEGG
+FFHH.GG.
+.HHIIIJJ
+.KK.IJJ.
+KK......
+./fillit samples/11sample  83,36s user 0,04s system 99% cpu 1:23,43 total

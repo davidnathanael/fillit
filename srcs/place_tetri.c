@@ -6,11 +6,11 @@
 /*   By: adompe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 18:50:50 by adompe            #+#    #+#             */
-/*   Updated: 2015/12/10 22:07:06 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/11 02:45:09 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "is_placeable.h"
+#include "place_tetri.h"
 #include "grid.h"
 #include "tab2list.h"
 #include "libft.h"
@@ -24,7 +24,7 @@
 ** Sinon retourne 0
 */
 
-int ft_is_placed(char **grid, t_tetr *tetri, int x, int y)
+int ft_isplaced(char **grid, t_tetr *tetri, int x, int y)
 {
 	int		i;
 	int		j;
@@ -103,13 +103,4 @@ void	ft_remove_tetri(char **grid, t_tetr *tetr)
 		i++;
 	}
 	tetr->placed = 0;
-}
-
-void	ft_empty_grid(char **grid)
-{
-	int	width;
-
-	width = ft_strlen(grid[0]);
-	free(grid);
-	grid = ft_alloc_grid(width);
 }

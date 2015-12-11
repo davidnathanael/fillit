@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 11:31:15 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/08 11:34:57 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/11 02:56:53 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,11 @@ int	main(int ac, char **av)
 			ft_putstr("open() failed.\n");
 			return (1);
 		}
-		else
-			ft_fillit(fd);
+		else if (ft_fillit(fd) == ERROR)
+		{
+			ft_putstr("error\n");
+			return (1);
+		}
 		if (close(fd) == -1)
 		{
 			ft_putstr("close() failed.\n");

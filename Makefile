@@ -33,8 +33,8 @@ SRCBASE		=	\
 				check_tetri.c												\
 				fillit.c													\
 				grid.c														\
-				is_placeable.c												\
 				main.c														\
+				place_tetri.c												\
 				tab2list.c
 
 INCBASE		=	\
@@ -42,8 +42,8 @@ INCBASE		=	\
 				check_tetri.h												\
 				fillit.h													\
 				grid.h														\
-				is_placeable.h												\
 				libft.h														\
+				place_tetri.h												\
 				tab2list.h
 
 SRCS		=	$(addprefix $(SRCDIR), $(SRCBASE))
