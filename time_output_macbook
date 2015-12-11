@@ -87,3 +87,38 @@ IIIHHJJ.
 .IKKLLMM
 .KKLLMM.
 ./fillit samples/13sample  0,31s user 0,00s system 98% cpu 0,323 total
+*ABORT*
+./fillit samples/14sample  10284,61s user 5,35s system 42% cpu 6:46:31,43 total
+*ABORT*
+./fillit samples/15sample  267,60s user 0,35s system 99% cpu 4:28,29 total
+.AABB.CC.
+AADDBCCEE
+QDD.B.EE.
+Q.FFGGIII
+QFFGG..I.
+QHHJJKKLL
+HHJJKKLL.
+NNNMMOOPP
+.NMMOOPP.
+./fillit samples/17sample  375,14s user 0,30s system 99% cpu 6:15,73 total
+*ABORT*
+./fillit samples/18sample  2536,25s user 3,92s system 99% cpu 42:22,44 total
+*ABORT*
+./fillit samples/19sample  22,60s user 0,03s system 99% cpu 22,670 total
+*ABORT*
+./fillit samples/20sample  9,76s user 0,01s system 99% cpu 9,776 total
+.AABB.CCDD
+AAEEBCCDD.
+.EE.BFFGG.
+.HH.FFGGJJ
+HHIIIKKJJQ
+.LLIKKMM.Q
+LLNNNMMOOQ
+.PPN..OO.Q
+PPRRSSTTUU
+.RRSSTTUU.
+./fillit samples/21sample  0,00s user 0,00s system 83% cpu 0,008 total
+*ABORT*
+./fillit samples/22sample  3555,13s user 1,88s system 99% cpu 59:18,60 total
+*ABORT*
+./fillit samples/23sample  1239,68s user 0,92s system 99% cpu 20:41,29 total
