@@ -69,3 +69,21 @@ FFHH.GG.
 .KK.IJJ.
 KK......
 ./fillit samples/11sample  83,36s user 0,04s system 99% cpu 1:23,43 total
+.AABB.CC
+AADDBCC.
+.DD.BEE.
+.FF.EEGG
+FFHH.GG.
+.HH.III.
+.JJKKILL
+JJKK.LL.
+./fillit samples/12sample  83,46s user 0,06s system 99% cpu 1:23,54 total
+.AABB.CC
+AADDBCC.
+.DD.B.EE
+.FFGGEE.
+FFGGHHJJ
+IIIHHJJ.
+.IKKLLMM
+.KKLLMM.
+./fillit samples/13sample  0,31s user 0,00s system 98% cpu 0,323 total
