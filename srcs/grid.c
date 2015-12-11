@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 12:09:57 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/11 00:59:29 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/11 14:58:12 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "grid.h"
 #include "libft.h"
 
-char **ft_smallest_grid(int length)
+char	**ft_smallest_grid(int length)
 {
 	int		nb_blocs;
 	int		width;
@@ -29,7 +29,7 @@ char **ft_smallest_grid(int length)
 	return (grid);
 }
 
-char **ft_bigger_grid(char **grid)
+char	**ft_bigger_grid(char **grid)
 {
 	int	width;
 

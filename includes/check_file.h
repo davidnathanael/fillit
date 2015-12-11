@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 13:50:19 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/11 02:31:51 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/11 15:31:56 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 char	**ft_check_file(int fd);
 char	*ft_file2str(int fd);
-int		ft_is_valid_char(char c);
+int		ft_is_valid_char(unsigned char c);
 int		ft_check_format(char *str);
 
 #endif

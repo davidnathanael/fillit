@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tab2list.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ddela-cr <ddela-cr@student.42.fr>			+#+  +:+       +#+        */
+/*   By: ddela-cr <ddela-cr@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/04 19:47:17 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/11 02:44:37 by ddela-cr         ###   ########.fr       */
+/*   Created: 2015/12/11 14:29:17 by ddela-cr          #+#    #+#             */
+/*   Updated: 2015/12/11 14:35:01 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "tab2list.h"
 #include "libft.h"
 
-t_list		*ft_tab2list(char **tab)
+t_list	*ft_tab2list(char **tab)
 {
 	t_list	*list;
 	int		i;
@@ -38,6 +38,7 @@ t_list		*ft_tab2list(char **tab)
 	}
 	return (list);
 }
+
 char	**ft_tab2tetr(int line, char **tab)
 {
 	int		start;
@@ -57,7 +58,7 @@ char	**ft_tab2tetr(int line, char **tab)
 	return (tetr);
 }
 
-t_list *ft_list_append(t_list *list, char **tetr, char index)
+t_list	*ft_list_append(t_list *list, char **tetr, char index)
 {
 	t_tetr	*new_tetr;
 
@@ -100,7 +101,6 @@ void	ft_set_positions(t_tetr *tetr)
 	tetr->pos = (t_pos *)malloc(sizeof(t_pos) * 4);
 	tetr->pos_in_grid.x = 0;
 	tetr->pos_in_grid.y = 0;
-	tetr->placed = 0;
 	while (grid[y][x] != '#')
 	{
 		x++;

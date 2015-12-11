@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_placeable.c                                     :+:      :+:    :+:   */
+/*   place_tetri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adompe <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ddela-cr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/08 18:50:50 by adompe            #+#    #+#             */
-/*   Updated: 2015/12/11 02:45:09 by ddela-cr         ###   ########.fr       */
+/*   Created: 2015/12/11 14:23:24 by ddela-cr          #+#    #+#             */
+/*   Updated: 2015/12/11 14:34:18 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 ** Sinon retourne 0
 */
 
-int ft_isplaced(char **grid, t_tetr *tetri, int x, int y)
+int		ft_isplaced(char **grid, t_tetr *tetri, int x, int y)
 {
 	int		i;
 	int		j;
@@ -53,7 +53,7 @@ int ft_isplaced(char **grid, t_tetr *tetri, int x, int y)
 	return (placed);
 }
 
-int	ft_is_placeable(char **grid, t_tetr *tetri, int x, int y)
+int		ft_is_placeable(char **grid, t_tetr *tetri, int x, int y)
 {
 	int		i;
 	int		len;
@@ -85,7 +85,6 @@ void	ft_place_tetri(char **grid, t_tetr *tetr, int x, int y)
 		grid[y + tetr->pos[i].y][x + tetr->pos[i].x] = tetr->letter;
 		i++;
 	}
-	tetr->placed = 1;
 }
 
 void	ft_remove_tetri(char **grid, t_tetr *tetr)
@@ -102,5 +101,4 @@ void	ft_remove_tetri(char **grid, t_tetr *tetr)
 		grid[pos_in_grid.y + pos[i].y][pos_in_grid.x + pos[i].x] = '.';
 		i++;
 	}
-	tetr->placed = 0;
 }

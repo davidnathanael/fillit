@@ -6,14 +6,14 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 12:49:51 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/11 02:31:50 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/11 15:31:53 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
 #include <sys/uio.h>
 #include <unistd.h>
-#include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
 #include "check_file.h"
 
@@ -30,16 +30,18 @@ char	**ft_check_file(int fd)
 char	*ft_file2str(int fd)
 {
 	int		ret;
+	char	*str;
 	char	buf[BUF_SIZE + 1];
 
 	ret = read(fd, buf, BUF_SIZE);
+	str = (char *)malloc(sizeof(char) * ret + 1);
 	buf[ret] = '\0';
 	if (ret <= 0)
 		return (NULL);
-	return (ft_strdup(buf));
+	return (ft_strcpy(str, buf));
 }
 
-int		ft_is_valid_char(char c)
+int		ft_is_valid_char(unsigned char c)
 {
 	if (c != '.' && c != '#' && c != '\n')
 		return (NOT_VALID);
@@ -53,7 +55,7 @@ int		ft_check_format(char *str)
 
 	i = 0;
 	count = 1;
-	while (str[i])
+	while (str[i] != '\0')
 	{
 		if (ft_is_valid_char(str[i]) == NOT_VALID)
 			return (NOT_VALID);
