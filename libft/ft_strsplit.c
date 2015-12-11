@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:04:49 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/05 00:03:36 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/01 17:48:18 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ char	**ft_strsplit(char const *s, char c)
 	int		nbwords;
 	char	**tab;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	nbwords = ft_countwords(s, c);
 	tab = (char **)malloc(sizeof(char *) * nbwords + 1);
