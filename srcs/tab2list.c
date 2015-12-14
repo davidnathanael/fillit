@@ -6,12 +6,11 @@
 /*   By: ddela-cr <ddela-cr@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/11 14:29:17 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/11 15:36:39 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/14 19:25:18 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 #include "tab2list.h"
 #include "libft.h"
 
@@ -101,7 +100,7 @@ void	ft_set_positions(t_tetr *tetr)
 	tetr->pos = (t_pos *)malloc(sizeof(t_pos) * 4);
 	tetr->pos_in_grid.x = 0;
 	tetr->pos_in_grid.y = 0;
-	while (grid[y][x] != '#')
+	while (grid[y][x] != '#' && y < 4 && x < 4)
 	{
 		x++;
 		if (x == 4)

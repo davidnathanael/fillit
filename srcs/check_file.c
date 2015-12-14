@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 12:49:51 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/11 15:31:53 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/14 19:25:19 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int		ft_check_format(char *str)
 		count++;
 		i++;
 	}
-	if (count != 21)
+	if (count != TETR_SIZE)
 		return (NOT_VALID);
 	return (VALID);
 }

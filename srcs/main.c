@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 11:31:15 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/11 02:56:53 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/14 19:26:05 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ int	main(int ac, char **av)
 		}
 	}
 	else
-		ft_putstr("Argument must be a single file\n");
+		ft_putstr("error\n");
 	return (0);
 }
