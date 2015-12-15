@@ -6,16 +6,15 @@
 /*   By: ddela-cr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/11 14:23:24 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/15 16:12:54 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/15 16:26:28 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "place_tetri.h"
 #include "grid.h"
 #include "tab2list.h"
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 int		ft_isplaced(char **grid, t_tetr *tetri, int x, int y)
 {

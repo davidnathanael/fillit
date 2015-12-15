@@ -6,12 +6,11 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 13:48:28 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/15 16:04:07 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/15 16:26:13 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 #include "fillit.h"
 #include "check_file.h"
 #include "check_tetri.h"

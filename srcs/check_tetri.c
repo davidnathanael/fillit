@@ -6,15 +6,13 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 17:24:25 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/14 19:14:56 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/15 16:26:09 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "check_tetri.h"
 #include "check_file.h"
 #include "tab2list.h"
-#include <stdio.h>
 
 int	ft_check_tetri(t_tetr *list)
 {
