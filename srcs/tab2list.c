@@ -6,13 +6,15 @@
 /*   By: ddela-cr <ddela-cr@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/11 14:29:17 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/14 19:25:18 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/15 16:04:00 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 #include "tab2list.h"
 #include "libft.h"
+#include "place_tetri.h"
 
 t_list	*ft_tab2list(char **tab)
 {
@@ -138,4 +140,5 @@ void	ft_set_positions_bis(t_tetr *tetr, int x, int y)
 			i++;
 		}
 	}
+	ft_set_tetri_size(tetr, 0);
 }

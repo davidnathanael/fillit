@@ -6,7 +6,7 @@
 /*   By: ddela-cr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/11 14:23:24 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/14 18:58:47 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/15 16:12:54 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "tab2list.h"
 #include "libft.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 int		ft_isplaced(char **grid, t_tetr *tetri, int x, int y)
 {
@@ -35,11 +36,11 @@ int		ft_isplaced(char **grid, t_tetr *tetri, int x, int y)
 			tetri->pos_in_grid.y = i;
 			return (placed);
 		}
-		j++;
+		j = (tetri->width == (width - j - 1)) ? width : j + 1;
 		if (j >= width)
 		{
 			j = 0;
-			i++;
+			i = (tetri->height == (width - i - 1)) ? width : i + 1;
 		}
 	}
 	return (placed);
@@ -93,4 +94,32 @@ void	ft_remove_tetri(char **grid, t_tetr *tetr)
 		grid[pos_in_grid.y + pos[i].y][pos_in_grid.x + pos[i].x] = '.';
 		i++;
 	}
+}
+
+void	ft_set_tetri_size(t_tetr *tetr, int count)
+{
+	int	x[2];
+	int	y[2];
+
+	x[0] = 0;
+	x[1] = 0;
+	y[0] = 0;
+	y[1] = 0;
+	while (count--)
+	{
+		if (tetr->pos[count].x <= x[0])
+			x[0] = tetr->pos[count].x;
+		if (tetr->pos[count].y <= y[0])
+			y[0] = tetr->pos[count].y;
+	}
+	count = 4;
+	while (count--)
+	{
+		if (tetr->pos[count].x >= x[1])
+			x[1] = tetr->pos[count].x;
+		if (tetr->pos[count].y <= y[1])
+			y[1] = tetr->pos[count].y;
+	}
+	tetr->width = x[1] - x[0];
+	tetr->height = y[1] - y[0];
 }
