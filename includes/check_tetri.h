@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 18:25:38 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/08 10:47:04 by adompe           ###   ########.fr       */
+/*   Updated: 2015/12/21 00:33:37 by adompe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 int		ft_check_tetri(t_tetr *list);
 int		ft_check_content(char **content);
-int		ft_check_cases(int x, int y, char **tmp);
+int		ft_check_cases(int x, int y, char **tmp, t_pos *pos);
+int		ft_check_double(int x, int y, char **tmp, t_pos *pos);
 
 #endif
