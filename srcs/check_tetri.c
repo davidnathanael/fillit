@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 17:24:25 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/21 16:38:16 by ddela-cr         ###   ########.fr       */
+/*   Updated: 2015/12/21 16:44:32 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,30 +99,26 @@ int		ft_check_double(int x, int y, char **tmp, t_pos *pos)
 {
 	if (y > 0 && pos->y > 0)
 	{
-		if (tmp[y - 1][x] == '#' && y - 1 != pos->y)
-			return (VALID);
-		if (tmp[pos->y - 1][pos->x] == '#' && pos->y - 1 != y)
+		if ((tmp[y - 1][x] == '#' && y - 1 != pos->y) ||
+			(tmp[pos->y - 1][pos->x] == '#' && pos->y - 1 != y))
 			return (VALID);
 	}
 	if (x > 0 && pos->x > 0)
 	{
-		if (tmp[y][x - 1] == '#' && x - 1 != pos->x)
-			return (VALID);
-		if (tmp[pos->y][pos->x - 1] == '#' && pos->x - 1 != x)
+		if ((tmp[y][x - 1] == '#' && x - 1 != pos->x) ||
+			(tmp[pos->y][pos->x - 1] == '#' && pos->x - 1 != x))
 			return (VALID);
 	}
 	if (y < 4 && pos->y < 4)
 	{
-		if (tmp[y + 1][x] == '#' && y + 1 != pos->y)
-			return (VALID);
-		if (tmp[pos->y + 1][pos->x] == '#' && pos->y + 1 != y)
+		if ((tmp[y + 1][x] == '#' && y + 1 != pos->y) ||
+			(tmp[pos->y + 1][pos->x] == '#' && pos->y + 1 != y))
 			return (VALID);
 	}
 	if (x < 4 && pos->x < 4)
 	{
-		if (tmp[y][x + 1] == '#' && x + 1 != pos->x)
-			return (VALID);
-		if (tmp[pos->y][pos->x + 1] == '#' && pos->x + 1 != x)
+		if ((tmp[y][x + 1] == '#' && x + 1 != pos->x) ||
+			(tmp[pos->y][pos->x + 1] == '#' && pos->x + 1 != x))
 			return (VALID);
 	}
 	return (NOT_VALID);
