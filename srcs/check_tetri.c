@@ -6,7 +6,7 @@
 /*   By: ddela-cr <ddela-cr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 17:24:25 by ddela-cr          #+#    #+#             */
-/*   Updated: 2015/12/21 01:34:54 by adompe           ###   ########.fr       */
+/*   Updated: 2015/12/21 16:38:16 by ddela-cr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	ft_check_tetri(t_tetr *list)
+int		ft_check_tetri(t_tetr *list)
 {
 	t_tetr	*tmp;
 
 	tmp = list;
 	while (tmp)
 	{
-		if (ft_check_content(tmp->content) == NOT_VALID)
+		if (ft_check_content(tmp->content, 0, 0) == NOT_VALID)
 			return (NOT_VALID);
 		free(tmp->content);
 		tmp = tmp->next;
@@ -31,16 +31,12 @@ int	ft_check_tetri(t_tetr *list)
 	return (VALID);
 }
 
-int	ft_check_content(char **content)
+int		ft_check_content(char **content, int x, int y)
 {
-	int		x;
-	int		y;
 	int		count;
 	t_pos	*pos;
 
 	pos = (t_pos *)malloc(sizeof(t_pos));
-	x = 0;
-	y = 0;
 	count = 0;
 	while (x <= 4 && y <= 4)
 	{
@@ -64,40 +60,42 @@ int	ft_check_content(char **content)
 	return (VALID);
 }
 
-int	ft_check_cases(int x, int y, char **tmp, t_pos *pos)
+int		ft_check_cases(int x, int y, char **tmp, t_pos *pos)
 {
 	if (y > 0)
 		if (tmp[y - 1][x] == '#')
 		{
-			pos->x = x;
-			pos->y = y - 1;
+			ft_set_pos_values(pos, x, y - 1);
 			return (VALID);
 		}
 	if (x > 0)
 		if (tmp[y][x - 1] == '#')
 		{
-			pos->x = x - 1;
-			pos->y = y;
+			ft_set_pos_values(pos, x - 1, y);
 			return (VALID);
 		}
 	if (y < 4)
 		if (tmp[y + 1][x] == '#')
 		{
-			pos->x = x;
-			pos->y = y + 1;
+			ft_set_pos_values(pos, x, y + 1);
 			return (VALID);
 		}
 	if (x < 4)
 		if (tmp[y][x + 1] == '#')
 		{
-			pos->x = x + 1;
-			pos->y = y;
+			ft_set_pos_values(pos, x + 1, y);
 			return (VALID);
 		}
 	return (NOT_VALID);
 }
 
-int	ft_check_double(int x, int y, char **tmp, t_pos *pos)
+void	ft_set_pos_values(t_pos *pos, int x, int y)
+{
+	pos->x = x;
+	pos->y = y;
+}
+
+int		ft_check_double(int x, int y, char **tmp, t_pos *pos)
 {
 	if (y > 0 && pos->y > 0)
 	{
